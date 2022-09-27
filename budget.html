@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="budget.js"></script>
+    <title>Budget App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Budget App</h1>
+            </div>
+            <div class="col-sm-6">
+                <div class="mt-4 p-3 bg-primary text-white rounded">
+                    <h5>Total Budget</h5>
+                    <div class="row">
+                        <div class="input-group mb-3 col-sm-12">
+                            <input type="number" class="form-control" placeholder="Amount" name="budget">
+                            <div class="col-sm-3">
+                                <button class="form-control" type="button">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-1 p-3 bg-primary text-white rounded">
+                    <h5>Expenses</h5>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" placeholder="Description" name="name">
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control" placeholder="Amount" name="amount">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="button" class="form-control" value="Add">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="mt-4 p-4 bg-primary text-white rounded">
+                    <h2>Summary</h2>
+                    <div style="text-align: center;" class="row text-primary">
+                        <div class="col card">
+                            <div class="card-header fw-bold">Budget</div>
+                            <div class="card-body">0</div>
+                        </div>                        
+                        <div class="col card">
+                            <div class="card-header fw-bold">Expenses</div>
+                            <div class="card-body">0</div>
+                        </div>
+                        <div class="col card">
+                            <div class="card-header fw-bold">Balance</div>
+                            <div class="card-body">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div style="border-style: solid" class="mt-4 p-4 rounded">          
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>S/N</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Time</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Airtime</td>
+                            <td>1500</td>
+                            <td>12-06-2022</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+          </div>
+    </div>
+</body>
+</html>
