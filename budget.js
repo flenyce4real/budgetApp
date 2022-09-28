@@ -5,9 +5,9 @@ const budget = [
 function refreshScreen(){
     const { Budget, Expenses, Balance } = budget[0]
     budget[0].Balance = Budget - Expenses
-    document.getElementById('budgetDisplay').innerHTML = `₦${Budget}`
-    document.getElementById('expensesDisplay').innerHTML = `₦${Expenses}`
-    document.getElementById('balanceDisplay').innerHTML = `₦${Budget - Expenses}`
+    document.getElementById('budgetDisplay').innerHTML = `₦${Budget.toLocaleString()}`
+    document.getElementById('expensesDisplay').innerHTML = `₦${Expenses.toLocaleString()}`
+    document.getElementById('balanceDisplay').innerHTML = `₦${(Budget - Expenses).toLocaleString()}`
 }
 
 function displaySummary(){
@@ -31,13 +31,13 @@ function addExpenses() {
         let tableRow = `<tr>
                             <td>${id}</td>
                             <td>${desc}</td>
-                            <td>${amount}</td>
+                            <td>₦${amount}</td>
                             <td style="font-size:18px"><i class="fa fa-edit"></i> / <i class="fa fa-trash" style="color:red"></i></td>
                         </tr>`
         document.getElementById('table_body_id').innerHTML += tableRow
         document.getElementById('exp_name').value = ''
         document.getElementById('exp_amount').value = ''
     } else {
-
+        
     }
 }
