@@ -15,8 +15,7 @@ function displaySummary(){
     if (!isNaN(budgetAmount) && budgetAmount > 0) {
         budget[0].Budget = budgetAmount
         refreshScreen()
-    } else {
-
+        document.getElementById('budget').value = ''
     }
 }
 
@@ -31,13 +30,15 @@ function addExpenses() {
         let tableRow = `<tr>
                             <td>${id}</td>
                             <td>${desc}</td>
-                            <td>₦${amount}</td>
-                            <td style="font-size:18px"><i class="fa fa-edit"></i> / <i class="fa fa-trash" style="color:red"></i></td>
+                            <td>₦${amount.toLocaleString()}</td>
+                            <td style="font-size:18px"><i class="fa fa-edit"></i> / <i class="fa fa-trash text-danger" onclick="deleteExpense()"></i></td>
                         </tr>`
         document.getElementById('table_body_id').innerHTML += tableRow
         document.getElementById('exp_name').value = ''
         document.getElementById('exp_amount').value = ''
-    } else {
-        
     }
+}
+
+function deleteExpense() {
+    alert('Hurray! i got clicked but i am still a work in progress')
 }
